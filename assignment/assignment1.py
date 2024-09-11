@@ -11,7 +11,7 @@ def findBestConfidenceScore(input: dict[list[int]], recallThreshold = 0.9, best 
         float number equal to the BEST threshold
     """
     bestMetric = 0
-    bestThreshold = 0
+    bestThreshold = None
     for threshold, arr in input.items():
         if not isinstance(threshold, float) or threshold > 1 or threshold <= 0:
             raise ValueError("Invalid threshold in dict " + str(threshold))

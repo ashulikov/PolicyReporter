@@ -5,7 +5,7 @@ from assignment.assignment1 import findBestConfidenceScore
 def test_empty_input():
     input = {}
     result = findBestConfidenceScore(input)
-    assert result == 0
+    assert result is None
 
 def test_single_threshold_with_high_recall():
     input = {0.5: [10, 3, 2, 20]}
@@ -29,7 +29,7 @@ def test_multiple_thresholds_with_best_recall_below_09():
         0.9: [4, 8, 9, 14]
     }
     result = findBestConfidenceScore(input)
-    assert result == 0
+    assert result is None
 
 def test_tie_case():
     input = {

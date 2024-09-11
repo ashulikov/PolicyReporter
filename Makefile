@@ -1,5 +1,6 @@
-test:
+tests:
 	python -m pytest
 
-build:
+install:
+	pip install -r requirements.txt
 	pip install .
